@@ -33,7 +33,6 @@ function App() {
   };
 
   const scrollToValidation = () => {
-    // Scroll to the validation section when the "Get Started" button is clicked
     document
       .getElementById("validation-section")
       .scrollIntoView({ behavior: "smooth" });
@@ -43,7 +42,7 @@ function App() {
     background: `linear-gradient(to top, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.3)), url('https://cdn.dribbble.com/users/3971299/screenshots/15298473/media/2373a8c3535195c95f11b8c1dc6c8782.png?resize=1000x750&vertical=center')`, // Path to your image
     backgroundSize: "cover",
     backgroundPosition: "center",
-    minHeight: "100vh", // Set a minimum height to fill the viewport
+    minHeight: "100vh",
     display: "flex",
     flexDirection: "column",
     alignItems: "self-start",
@@ -55,7 +54,6 @@ function App() {
 
   return (
     <ChakraProvider>
-      {/* Landing Section with "Get Started" Button */}
       <Box id="get-started" style={getStartedStyle}>
         <Heading as="h1" fontSize="50px">
           Welcome to Our App
@@ -73,7 +71,6 @@ function App() {
         </Button>
       </Box>
 
-      {/* Credit Card Validation Section */}
       <Box id="validation-section" height={"100vh"} paddingTop={"55%"} p={4}>
         <Heading as="h2" size="lg">
           Credit Card Validation
@@ -108,12 +105,9 @@ function App() {
         position="fixed"
         bottom="0"
         right="0"
-        // width="100%"
-        // bg="teal.500"
         color="white"
         padding="10px"
         display="grid"
-        // gridTemplateColumns="1fr 1fr"
         alignItems="center"
         justifyContent="center"
       >
@@ -134,6 +128,12 @@ function App() {
           href="https://yourwebsite.com"
           target="_blank"
           rel="noopener noreferrer"
+          style={{
+            margin: "5px",
+            backgroundColor: "#462ee2",
+            borderRadius: "7px",
+            padding: "10px",
+          }}
         >
           <Text textAlign="center">Personal Website</Text>
         </a>
